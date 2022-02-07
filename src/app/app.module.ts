@@ -3,16 +3,30 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ActivitySignUpFormComponent } from './activity-sign-up-form/activity-sign-up-form.component';
+import { UsersDataListingComponent } from './users-data-listing/users-data-listing.component';
+import {SharedApiService} from './Shared/shared-api.service'
+
+import {HttpClientModule} from '@angular/common/http';
+import { FormsModule , ReactiveFormsModule} from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ActivitySignUpFormComponent,
+    UsersDataListingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [SharedApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

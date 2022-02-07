@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col s8 offset-s2">
+     <div class="card">
+      <div class="sm-jumbotron center-align">
+          <h2>User Sign Up Form</h2>
+      </div> 
+      <form class="col s12 white" #userSignUpForm="ngForm" (ngSubmit)="onSubmit(userSignUpForm)"
+            autocomplete="off" >
+        <div class="row">
+            <div class="input-field col s6">
+              <input type="text" name="FirstName" #FirstName="ngModel" [(ngModel)]="user.FirstName" required
+                    class="validate">
+              <label for="firstName">First Name*</label>
+            </div>
+            <div class="input-field col s6">
+              <input type="text" name="LastName" #LastName="ngModel" class="validate" [(ngModel)]="user.LastName" required>
+              <label for="lastName" >Last Name*</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+              <input type="email" name="EmailAddress" class="validate" #EmailAddress="ngModel" [(ngModel)]="user.EmailAddress" required>
+              <label for="emailAddress" >EmailAddress*</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input type="date" name="StartDate" #StartDate="ngModel" class="validate" [(ngModel)]="user.StartDate">
+              <label for="startDate">Start date</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+              <input name="Experience" type="number" class="validate" #Experience="ngModel" [(ngModel)]="user.Experience"
+              min="0">
+              <label for="experience">Experience</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+              <input name="Activity" type="text" class="validate" #Activity="ngModel" [(ngModel)]="user.Activity">
+              <label for="activity">Activity</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+              <input name="Comments" type="text" class="validate" #Comments="ngModel" [(ngModel)]="user.Comments">
+              <label for="comments">Comments</label>
+            </div>
+        </div>
+        <div class="row">
+            <button style="margin-left: 10px;" [disabled]="!userSignUpForm.valid"
+            class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+              </button>
+        </div>  
+      </form>  
+      
+     </div>   
+    </div>
+</div>

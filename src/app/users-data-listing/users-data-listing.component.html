@@ -1,0 +1,35 @@
+
+  <div class="row">
+    <div class="col s8 offset-s2">
+     <div class="card">
+      <div class="sm-jumbotron center-align">
+          <h2>Signed Up Users List</h2>
+      </div> 
+      <table class="striped">
+        <thead>
+          <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email Address Name</th>
+              <th>Start Date</th>
+              <th>Experience</th>
+              <th>Activity</th>
+              <th>Comments</th>
+          </tr>
+        </thead>
+    
+        <tbody >
+          <tr *ngFor="let user of UsersList">
+            <td>{{user.FirstName}}</td>
+            <td>{{user.LastName}}</td>
+            <td>{{user.EmailAddress}}</td>
+            <td>{{user.StartDate}}</td>
+            <td style="text-align: center;">{{user.Experience}}</td>
+            <td>{{user.Activity}}</td>
+            <td>{{user.Comments}}</td>
+          </tr>
+        </tbody>
+      </table>   
+     </div>   
+    </div>
+</div>
